@@ -3,20 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { SearchComponent } from './search/search.component';
-import { SpecieComponent } from './specie/specie.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchComponent,
-    SpecieComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

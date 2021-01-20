@@ -6,28 +6,7 @@ const uri = 'mongodb+srv://gioele-bra:hGSdfpfQKAke3STS@lifebelowwater.dbkxm.mong
 
 /* GET */
 router.get('/', function (req, res, next) {
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    client.connect(err => {
-        const collection = client.db("data").collection("animalia");
-        collection.find().toArray((err, result) => {
-            if (err) console.log(err.message);
-            else res.send(result);
-            client.close();
-        });
-    });
-});
-
-router.get('/name/:name', function (req, res, next) {
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    name = req.params.name;
-    client.connect(err => {
-        const collection = client.db("data").collection("animalia");
-        collection.find({ 'Name': `${name}` }).toArray((err, result) => {
-            if (err) console.log(err.message);
-            else res.send(result);
-            client.close();
-        });
-    });
+    
 });
 
 module.exports = router;
