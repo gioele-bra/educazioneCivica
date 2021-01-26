@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var cors = require ('cors');
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://gioele-bra:hGSdfpfQKAke3STS@lifebelowwater.dbkxm.mongodb.net/data?retryWrites=true&w=majority';

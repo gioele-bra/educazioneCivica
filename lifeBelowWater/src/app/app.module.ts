@@ -9,6 +9,7 @@ import { AnimaliaComponent } from './animalia/animalia.component';
 import { PlantaeComponent } from './plantae/plantae.component';
 import { FungiComponent } from './fungi/fungi.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    GoogleChartsModule,
     NgbModule
   ],
   providers: [],
