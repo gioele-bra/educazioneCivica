@@ -10,6 +10,7 @@ import { PlantaeComponent } from './plantae/plantae.component';
 import { FungiComponent } from './fungi/fungi.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     AppRoutingModule,
     HttpClientModule,
     GoogleChartsModule,
+    FormsModule,
     NgbModule
   ],
   providers: [],
