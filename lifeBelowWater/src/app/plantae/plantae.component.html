@@ -4,3 +4,31 @@
   </div>
 </div>
 
+<!--   ^^^ NAVBAR ^^^    -->
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col">
+      <select [(ngModel)]="selectedOption">
+        <option *ngFor="let o of options1">
+            {{o.name}}
+        </option>
+      </select>
+      &nbsp;
+      <select [(ngModel)]="chartType">
+        <option *ngFor="let o of options2">
+            {{o.name}}
+        </option>
+      </select>
+
+      <button (click)="submit()" type="button" class="btn btn-primary ml-2">Search</button>
+
+      <google-chart #mychart *ngIf="chartData.length>0" [options]="options" [type]="chartTypee" [data]="chartData" [width]="width" [height]="height"></google-chart>
+
+    </div>
+
+  </div>
+
+</div>

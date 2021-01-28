@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from '../api.service';
 import { ParamMap, ActivatedRoute } from '@angular/router';
@@ -9,7 +9,6 @@ import { ParamMap, ActivatedRoute } from '@angular/router';
   styleUrls: ['./animalia.component.css']
 })
 export class AnimaliaComponent {
-  @ViewChild('mychart', {static: false}) mychart;
   query: string;
   apiServiceObs: Observable<Object>;
   results: any;
@@ -31,7 +30,7 @@ export class AnimaliaComponent {
 
   options2 = [
       { name: "PieChart", value: "PieChart" },
-      { name: "BarChart", value: "BarChart" }
+      { name: "ColumnChart", value: "ColumnChart" }
     ]
 
   constructor(
@@ -51,10 +50,9 @@ export class AnimaliaComponent {
         if(this.selectedOption == 'Total') { this.chartData.push([this.results[i].Name, this.results[i].Total]); }
 
         if(this.chartType == 'PieChart') { this.width = '600'; this.height = '600'; }
-        if(this.chartType == 'BarChart') { this.width = '1500'; this.height = '1500'; }
+        if(this.chartType == 'ColumnChart') { this.width = '1500'; this.height = '1500'; }
       }
       this.chartTypee = this.chartType;
-      this.mychart.draw();
       console.log(this.chartData)
     });
   }
