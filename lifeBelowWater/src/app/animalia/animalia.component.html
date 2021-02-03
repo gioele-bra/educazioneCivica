@@ -7,10 +7,10 @@
 <!--   ^^^ NAVBAR ^^^    -->
 
 <div class="container-fluid">
-
+<br><br>
   <div class="row">
 
-    <div class="col">
+    <div class="col-4">
       <select [(ngModel)]="selectedOption">
         <option *ngFor="let o of options1">
             {{o.name}}
@@ -23,9 +23,9 @@
         </option>
       </select>
 
-      <button (click)="submit()" type="button" class="btn btn-primary ml-2">Search</button>
+      <button (click)="submit()" type="button" class="btn btn-primary ml-2">Search</button><br><br>
 
-      <google-chart #mychart *ngIf="chartData.length>0" [options]="options" [type]="chartTypee" [data]="chartData" [width]="width" [height]="height"></google-chart>
+      <google-chart *ngIf="chartData.length>0" [options]="options" [type]="chartTypee" [data]="chartData" [width]="width" [height]="height"></google-chart>
 
     </div>
 
