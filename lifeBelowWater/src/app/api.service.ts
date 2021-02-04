@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  baseUrl = `https://3000-de5fc731-4ead-473f-be03-14aadbdec921.ws-eu03.gitpod.io`;
+  baseUrl = `https://3000-f0f369a2-28e1-4727-961a-3a023f04222b.ws-eu03.gitpod.io`;
 
   getAnimalia() {
     const url = `${this.baseUrl}/animalia`;

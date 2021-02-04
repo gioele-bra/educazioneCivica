@@ -51,8 +51,8 @@ export class FungiComponent {
         if(this.selectedOption == 'Vulnerable') { this.chartData.push([this.results[i].Name, this.results[i].VU]); }
         if(this.selectedOption == 'Total') { this.chartData.push([this.results[i].Name, this.results[i].Total]); }
 
-        if(this.chartType == 'PieChart') { this.width = '600'; this.height = '600'; }
-        if(this.chartType == 'ColumnChart') { this.width = '1500'; this.height = '1500'; }
+        if(this.chartType == 'PieChart') { this.width = '1500'; this.height = '600'; }
+        if(this.chartType == 'ColumnChart') { this.width = '1500'; this.height = '500'; }
       }
       this.chartTypee = this.chartType;
       console.log(this.chartData)

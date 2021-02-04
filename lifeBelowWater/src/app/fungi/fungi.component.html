@@ -1,13 +1,15 @@
 <div class="row">
   <div class="col bg-danger">
-    <h1 style="float:left;" class="text-muted"><a class="text-body" href="#" [routerLink]="['/home']">Home</a> <a class="ml-5 text-body" href="#" [routerLink]="['/animalia']">Animalia</a> <a class="ml-5 mr-5 text-body" href="#" [routerLink]="['/plantae']">Plantae</a>Fungi</h1>
+    <img src="/assets/imgs/fungi.png" height="150" style="float:left;" class="p-2"> <br><br>
+    <h1 style="float:left;" class="text-muted ml-3"><a class="text-body" href="#" [routerLink]="['/home']">Home</a>&nbsp;&nbsp;&nbsp; <a class="ml-5 text-body" href="#" [routerLink]="['/animalia']">Animalia</a>&nbsp;&nbsp;&nbsp; <a class="ml-5 mr-5 text-body" href="#" [routerLink]="['/plantae']">Plantae</a>&nbsp;&nbsp;&nbsp;Fungi</h1>
   </div>
 </div>
 
 <!--   ^^^ NAVBAR ^^^    -->
 
 <div class="container-fluid">
-
+  <br><br>
+  <p class="bg-white p-3">In questa sezione è possibile visualizzare i dati in forma di grafici a barre o a torta, divisi in funghi a rischio, funghi gravemente a rischio, funghi vulnerabili e funghi estinti totali</p>
   <div class="row">
 
     <div class="col">
@@ -25,7 +27,7 @@
 
       <button (click)="submit()" type="button" class="btn btn-primary ml-2">Search</button>
 
-      <google-chart #mychart *ngIf="chartData.length>0" [options]="options" [type]="chartTypee" [data]="chartData" [width]="width" [height]="height"></google-chart>
+      <google-chart *ngIf="chartData.length>0" [options]="options" [type]="chartTypee" [data]="chartData" [width]="width" [height]="height"></google-chart>
 
     </div>
 
